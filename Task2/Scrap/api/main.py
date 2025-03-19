@@ -10,6 +10,10 @@ from bs4 import BeautifulSoup
 
 app = FastAPI()
 
+
+@app.get('/')
+async def scrape_and_store():
+    return {"Hello":"Guys"}
 class URLRequest(BaseModel):
     url: str
 
